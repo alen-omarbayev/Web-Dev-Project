@@ -6,4 +6,3 @@ Askarbek Zhangirkhan
 Sekenova Balym
 Description:
 Something..
-Alen gay
