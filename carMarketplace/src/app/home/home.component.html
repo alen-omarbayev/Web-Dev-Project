@@ -29,40 +29,10 @@
     </div>
 
     <div class="scroll-main">
-      <div class="scroll-container">
-        <div class="car-img"></div>
-        <p class="car-name">Mercedes-Benz G 63 AMG</p>
-        <p class="car-price">from 35 000 000 ₸</p>
-        <button>Watch</button>
-      </div>
-      <div class="scroll-container">
-        <div class="car-img"></div>
-        <p class="car-name">Mercedes-Benz G 63 AMG</p>
-        <p class="car-price">from 35 000 000 ₸</p>
-        <button>Watch</button>
-      </div>
-      <div class="scroll-container">
-        <div class="car-img"></div>
-        <p class="car-name">Mercedes-Benz G 63 AMG</p>
-        <p class="car-price">from 35 000 000 ₸</p>
-        <button>Watch</button>
-      </div>
-      <div class="scroll-container">
-        <div class="car-img"></div>
-        <p class="car-name">Mercedes-Benz G 63 AMG</p>
-        <p class="car-price">from 35 000 000 ₸</p>
-        <button>Watch</button>
-      </div>
-      <div class="scroll-container">
-        <div class="car-img"></div>
-        <p class="car-name">Mercedes-Benz G 63 AMG</p>
-        <p class="car-price">from 35 000 000 ₸</p>
-        <button>Watch</button>
-      </div>
-      <div class="scroll-container">
-        <div class="car-img"></div>
-        <p class="car-name">Mercedes-Benz G 63 AMG</p>
-        <p class="car-price">from 35 000 000 ₸</p>
+      <div *ngFor="let car of cars" class="scroll-container">
+        <div class="car-img" [style.background-image]="'url(' + car.image + ')'"></div>
+        <p class="car-name">{{ car.name }}</p>
+        <p class="car-price">{{ car.price }}</p>
         <button>Watch</button>
       </div>
     </div>
