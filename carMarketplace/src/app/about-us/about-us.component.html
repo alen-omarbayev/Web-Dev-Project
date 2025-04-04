@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about-us.component.css">
+</head>
+<body class="telo-about">
+    
+    <section class="about-section">
+        <h1>Your Trusted Automotive Marketplace</h1>
+        <p>We make buying and selling cars easy, secure, and hassle-free. Find the perfect vehicle or the right buyer with confidence.</p>
+    </section>
+    
+
+    <section class="cards">
+        <div class="card">
+            <div class="card-content">
+                <h2>Extensive Selection</h2>
+                <p>Explore a vast catalog of new and used cars from various brands and model years.</p>
+                <button>Узнать больше - переход на каталог</button>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-content">
+                <h2>Create Your Listing</h2>
+                <p>List your car for sale easily and reach potential buyers on our platform.</p>
+                <button>Узнать больше - переход на создать объявление</button>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-content">
+                <h2>Latest News</h2>
+                <p>Stay updated with the latest news from the automotive world.</p>
+                <button>Узнать больше - переход на новости</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="history">
+        <h2>History</h2>
+        <div class="history-nav">
+            <button class="year-btn active" onclick="showHistory(2024, this)">2024</button>
+            <button class="year-btn" onclick="showHistory(2025, this)">2025</button>
+        </div>
+        <div class="history-content">
+            <div id="year-2024" class="history-item">
+                <h3>2024</h3>
+                <p>2024 we opened our first office and deployed our website</p>
+            </div>
+            <div id="year-2025" class="history-item hidden">
+                <h3>2025</h3>
+                <p>Added new functionals and features</p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function showHistory(year, button) {
+            document.querySelectorAll('.history-item').forEach(item => item.classList.add('hidden'));
+            document.querySelector(`#year-${year}`).classList.remove('hidden');
+            document.querySelectorAll('.year-btn').forEach(btn => btn.classList.remove('active', 'dim'));
+            button.classList.add('active');
+    
+            document.querySelectorAll('.year-btn').forEach(btn => {
+                if (btn !== button) btn.classList.add('dim'); 
+            });
+        }
+    </script>
+    
+    
+    
+</body>
+</html>
