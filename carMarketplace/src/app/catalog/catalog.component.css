@@ -280,4 +280,22 @@ label {
   align-items: center;      /* Центрирует карточки по вертикали */
   padding: 0 1.5rem;        /* Добавляет отступы по бокам для красоты */
 }
+.no-results{
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #00A6FB;
+  font-family: 'Space Grotesk', serif;
+}
+.reset-button{
+  margin-top: 15px;
+  background-color: #00A6FB;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  border: none;
+  font-family: 'Space Grotesk', serif;
+  font-size: 15px;
+  cursor: pointer;
+}
 
