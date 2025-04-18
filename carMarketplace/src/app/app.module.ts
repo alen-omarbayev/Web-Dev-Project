@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { GenerateAdComponent } from './generate-ad/generate-ad.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import {FormsModule} from '@angular/forms';
+import { NewsListComponent } from './news-list/news-list.component';
+import { NewsDetailComponent } from './news-detail/news-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import {FormsModule} from '@angular/forms';
     HomeComponent,
     LoginComponent,
     GenerateAdComponent,
-    CatalogComponent
+    CatalogComponent,
+    NewsListComponent,
+    NewsDetailComponent
   ],
   imports: [
     BrowserModule,

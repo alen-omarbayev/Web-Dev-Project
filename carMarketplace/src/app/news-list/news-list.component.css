@@ -1,0 +1,40 @@
+.news-container {
+    width: 95%;
+    margin: 50px auto;
+  }
+  
+  .news-item {
+    display: flex;
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 166, 251, 0.6);
+  }
+  
+  .news-item img {
+    width: 200px;
+    height: 140px;
+    /* object-fit: cover; */
+  }
+  
+  .news-content {
+    padding: 15px;
+  }
+  
+  .news-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .news-title:hover {
+    text-decoration: underline;
+  }
+  
+  .news-content p {
+    margin: 5px 0;
+    color: #555;
+  }
+  

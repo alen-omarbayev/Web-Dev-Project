@@ -1,0 +1,11 @@
+.news-detail-container {
+    width: 60%;
+    margin: 30px auto;
+  }
+  
+  .news-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
