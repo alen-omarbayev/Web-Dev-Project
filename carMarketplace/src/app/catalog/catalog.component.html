@@ -54,7 +54,7 @@
   <div class="car-cards-container">
     <!-- Карточки автомобилей с фильтрацией -->
     <div class="car-card" *ngFor="let car of filteredCars; let i = index" [class]="'delay-' + ((i % 3) + 1)">
-      <img [src]="car.image" alt="Car Image" class="car-img">
+      <img [src]="car.photo" alt="Car Image" class="car-img">
       <div class="car-info">
         <h3 class="car-title">{{car.brand}} {{car.model}}</h3>
         <p class="text-gray-600 mt-2">Year: {{car.year}}</p>

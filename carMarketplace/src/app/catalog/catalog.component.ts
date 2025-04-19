@@ -26,7 +26,7 @@ export class CatalogComponent implements OnInit {
       .subscribe(data => {
         this.cars = data.map(car => ({
           ...car,
-          image: 'http://localhost:8000' + car.photo // добавляем путь к фото
+          image: 'http://localhost:8000/media/car_photos/' + car.photo // добавляем путь к фото
         }));
       });
   }
