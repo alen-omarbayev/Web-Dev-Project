@@ -6,7 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'carMarketplace_back.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'car_market.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

@@ -1,60 +1,35 @@
 <div class="place-ad-container">
-    <h2>Generate an ad</h2>
-    <form>
-      <label>
-        <svg class="icon"><use xlink:href="#brand-icon"></use></svg>
-        Car brand:
-        <input type="text" placeholder="For example, Toyota" name="brand" required />
-      </label>
-  
-      <label>
-        <svg class="icon"><use xlink:href="#condition-icon"></use></svg>
-        Condition:
-        <select name="condition" required>
-          <option value="" disabled selected>Select condition</option>
-          <option value="new">New</option>
-          <option value="used">Used</option>
-        </select>
-      </label>
-  
-      <label>
-        <svg class="icon"><use xlink:href="#calendar-icon"></use></svg>
-        Year of relese:
-        <input type="number" min="1900" max="2025" name="year" required />
-      </label>
-  
-      <label>
-        <svg class="icon"><use xlink:href="#price-icon"></use></svg>
-        Price (₸):
-        <input type="number" min="0" step="1000" name="price" required />
-      </label>
-  
-      <label class="upload-label">
-        <svg class="icon"><use xlink:href="#upload-icon"></use></svg>
-        Upload photo:
-        <input type="file" accept="image/*" required />
-      </label>
-  
-      <button type="submit">Place an ad</button>
-    </form>
-  
-    <!-- SVG Icons -->
-    <svg style="display: none;">
-      <symbol id="brand-icon" viewBox="0 0 24 24">
-        <path fill="#0582CA" d="M3 13h2v-2H3v2zm4 0h14v-2H7v2z"/>
-      </symbol>
-      <symbol id="condition-icon" viewBox="0 0 24 24">
-        <path fill="#0582CA" d="M12 2a10 10 0 100 20 10 10 0 000-20zM11 14v-4h2v4h-2zm0 4h2v-2h-2v2z"/>
-      </symbol>
-      <symbol id="calendar-icon" viewBox="0 0 24 24">
-        <path fill="#0582CA" d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zM5 20V9h14v11H5z"/>
-      </symbol>
-      <symbol id="price-icon" viewBox="0 0 24 24">
-        <path fill="#0582CA" d="M12 1L3 5v6c0 5.25 3.66 10.74 9 12 5.34-1.26 9-6.75 9-12V5l-9-4z"/>
-      </symbol>
-      <symbol id="upload-icon" viewBox="0 0 24 24">
-        <path fill="#0582CA" d="M5 17h14v2H5v-2zm7-12l5 5h-3v4h-4v-4H7l5-5z"/>
-      </symbol>
-    </svg>
-  </div>
-  
+  <h2>Generate an ad</h2>
+  <form (ngSubmit)="submitAd()" #adForm="ngForm">
+    <label>
+      Car brand:
+      <input type="text" name="brand" [(ngModel)]="brand" required />
+    </label>
+
+    <label>
+      Condition:
+      <select name="condition" [(ngModel)]="condition" required>
+        <option value="" disabled selected>Select condition</option>
+        <option value="new">New</option>
+        <option value="used">Used</option>
+      </select>
+    </label>
+
+    <label>
+      Year of release:
+      <input type="number" name="year" min="1900" max="2025" [(ngModel)]="year" required />
+    </label>
+
+    <label>
+      Price (₸):
+      <input type="number" name="price" min="0" step="1000" [(ngModel)]="price" required />
+    </label>
+
+    <label>
+      Upload photo:
+      <input type="file" (change)="onPhotoSelected($event)" accept="image/*" required />
+    </label>
+
+    <button type="submit">Place an ad</button>
+  </form>
+</div>
