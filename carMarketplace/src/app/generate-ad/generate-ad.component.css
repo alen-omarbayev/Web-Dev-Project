@@ -1,0 +1,65 @@
+.place-ad-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 100, 148, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h2 {
+    color: #006494;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 1rem;
+    color: #006494;
+    font-weight: 600;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select,
+  input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00A6FB;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+  }
+  
+  .upload-label {
+    cursor: pointer;
+  }
+  
+  button {
+    background-color: #00A6FB;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0582CA;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+    fill: #0582CA;
+  }
+  
