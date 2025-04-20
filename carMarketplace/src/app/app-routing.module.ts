@@ -8,6 +8,8 @@ import {GenerateAdComponent} from "./generate-ad/generate-ad.component";
 import { NewsListComponent } from './news-list/news-list.component';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { RegisterComponent } from './register/register.component'; 
+import { ProfileComponent } from './profile/profile.component';
+import { authGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent },
@@ -18,6 +20,7 @@ const routes: Routes = [
   { path: 'news', component: NewsListComponent },
   { path: 'news/:id', component: NewsDetailComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'profile', component: ProfileComponent,canActivate: [authGuard] },// Защищаем роут
 ];
 
 @NgModule({

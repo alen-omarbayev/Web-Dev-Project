@@ -14,6 +14,7 @@ import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { AuthService } from './auth.service';
 import { RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { RegisterComponent } from './register/register.component';
     CatalogComponent,
     NewsListComponent,
     NewsDetailComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

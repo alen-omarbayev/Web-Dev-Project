@@ -21,6 +21,7 @@ export class AuthService {
     return this.http.post(`${this.API_URL}/login/`, { username, password }).pipe(
       tap((response: any) => {
         this.setTokens(response.access, response.refresh);
+        this.router.navigate(['/profile']);
       })
     );
   }
@@ -55,7 +56,8 @@ export class AuthService {
 
   // Проверяем, авторизован ли пользователь
   isAuthenticated(): boolean {
-    return !!this.getToken();
+    const token = this.getToken();
+    return !!token;
   }
 
   // Обновление токена (опционально)
@@ -67,12 +69,23 @@ export class AuthService {
       })
     );
   }
-
+  // регистрация 
   register(username: string, email: string, password: string) {
     return this.http.post(
       'http://localhost:8000/api/register/',  // Полный URL
       { username, email, password },
       { headers: { 'Content-Type': 'application/json' } }
     );
+  }
+  // метод для получения данных пользователя
+  getUserData(): Observable<any> {
+    return this.http.get(`${this.API_URL}/user/`);
+  }
+  getUserProfile(): Observable<any> {
+    return this.http.get(`${this.API_URL}/user/`, {
+      headers: {
+        'Authorization': `Bearer ${this.getToken()}` // Добавляем JWT токен
+      }
+    });
   }
 }

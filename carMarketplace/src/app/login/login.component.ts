@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +19,7 @@ export class LoginComponent {
   isLoading = false;
 
   constructor(
+    private route: ActivatedRoute,
     private authService: AuthService,
     private router: Router
   ) {}
@@ -35,7 +37,9 @@ export class LoginComponent {
     this.authService.login(this.username, this.password).subscribe({
       next: (response) => {
         console.log('Login successful', response);
-        this.router.navigate(['']);
+        const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/profile';
+        this.router.navigateByUrl(returnUrl);
+        // this.router.navigate(['']);
       },
       error: (err) => {
         console.error('Login error:', err);
@@ -48,6 +52,7 @@ export class LoginComponent {
         this.isLoading = false;
       }
     });
+
   }
 
   fillTestCredentials(): void {
