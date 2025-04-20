@@ -38,6 +38,10 @@
         <span *ngIf="!isLoading">login</span>
         <span *ngIf="isLoading">loading...</span>
       </button>
+
+      <div class="register-link">
+        Don't have an account? <a routerLink="/register">Register</a>
+      </div>
   
       <button type="button" (click)="fillTestCredentials()" 
               class="test-btn">

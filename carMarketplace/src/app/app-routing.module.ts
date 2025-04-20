@@ -7,6 +7,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import {GenerateAdComponent} from "./generate-ad/generate-ad.component";
 import { NewsListComponent } from './news-list/news-list.component';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
+import { RegisterComponent } from './register/register.component'; 
 
 const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'generate-ad', component: GenerateAdComponent},
   { path: 'news', component: NewsListComponent },
   { path: 'news/:id', component: NewsDetailComponent },
+  { path: 'register', component: RegisterComponent },
 ];
 
 @NgModule({

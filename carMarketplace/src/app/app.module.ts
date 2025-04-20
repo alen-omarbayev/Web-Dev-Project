@@ -8,11 +8,12 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { GenerateAdComponent } from './generate-ad/generate-ad.component';
 import { CatalogComponent } from './catalog/catalog.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NewsListComponent } from './news-list/news-list.component';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { AuthService } from './auth.service';
 import { RouterModule } from '@angular/router';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -24,13 +25,16 @@ import { RouterModule } from '@angular/router';
     GenerateAdComponent,
     CatalogComponent,
     NewsListComponent,
-    NewsDetailComponent
+    NewsDetailComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    RouterModule 
   ],
   providers: [
     AuthService

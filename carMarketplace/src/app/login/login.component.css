@@ -75,7 +75,7 @@ main{
 
 /* Стили кнопки */
 .login-button {
-  width: 200px; /* Фиксированная ширина */
+  width: 100%; /* Фиксированная ширина */
   padding: 14px;
   background-color: #00A6FB;
   color: white;
@@ -157,4 +157,19 @@ main{
 .login-form h2{
   font-family: 'Space Grotesk', sans-serif;
   color: #013553;
+}
+
+.register-link{
+  font-size: 15px;
+  padding-top: 15px;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #013553;
+}
+.register-link a{
+  text-decoration: none;
+  color: #00A6FB;
+  transition: text-decoration 0.3s ease;
+}
+.register-link a:hover{
+  text-decoration: underline;
 }

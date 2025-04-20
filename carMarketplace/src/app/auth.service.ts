@@ -67,4 +67,12 @@ export class AuthService {
       })
     );
   }
+
+  register(username: string, email: string, password: string) {
+    return this.http.post(
+      'http://localhost:8000/api/register/',  // Полный URL
+      { username, email, password },
+      { headers: { 'Content-Type': 'application/json' } }
+    );
+  }
 }

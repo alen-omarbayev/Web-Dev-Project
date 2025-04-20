@@ -3,6 +3,9 @@ from .models import Car
 from .serializers import CarSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from django.contrib.auth import get_user_model
+from .serializers import UserSerializer
+
 
 class CarListCreateAPIView(generics.ListCreateAPIView):
     queryset = Car.objects.all().order_by('-id')
@@ -18,3 +21,9 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
 
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
+
+User = get_user_model()
+
+class RegisterView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
