@@ -2,9 +2,9 @@
     max-width: 600px;
     margin: auto;
     padding: 2rem;
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     border-radius: 16px;
-    box-shadow: 0 0 20px rgba(0, 100, 148, 0.1);
+    /* box-shadow: 0 0 20px rgba(0, 100, 148, 0.1); */
     font-family: 'Segoe UI', sans-serif;
   }
   
@@ -12,6 +12,7 @@
     color: #006494;
     text-align: center;
     margin-bottom: 1.5rem;
+    font-family: 'Space Grotesk', sans-serif;
   }
   
   form label {
@@ -19,6 +20,8 @@
     margin-bottom: 1rem;
     color: #006494;
     font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
   }
   
   input[type="text"],
@@ -31,6 +34,8 @@
     border: 1px solid #00A6FB;
     border-radius: 8px;
     margin-top: 0.5rem;
+    font-family: 'Yrsa', serif;
+    color: #006494;
   }
   
   .upload-label {
