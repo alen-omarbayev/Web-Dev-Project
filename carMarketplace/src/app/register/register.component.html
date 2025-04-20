@@ -1,10 +1,18 @@
-<div class="register-container">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+</head>
+
+<main>
+  <div class="register-container">
     <h2>Create Account</h2>
     
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label>Username</label>
-        <input type="text" formControlName="username">
+        <input type="text" formControlName="username" placeholder="Enter your username">
         <div *ngIf="registerForm.get('username')?.invalid && registerForm.get('username')?.touched" 
              class="error">
           Username must be at least 3 characters
@@ -13,7 +21,7 @@
   
       <div class="form-group">
         <label>Email</label>
-        <input type="email" formControlName="email">
+        <input type="email" formControlName="email" placeholder="Enter your email">
         <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" 
              class="error">
           Please enter a valid email
@@ -22,7 +30,7 @@
   
       <div class="form-group">
         <label>Password</label>
-        <input type="password" formControlName="password">
+        <input type="password" formControlName="password" placeholder="Enter your password">
         <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" 
              class="error">
           Password must be at least 6 characters
@@ -31,7 +39,7 @@
   
       <div class="form-group">
         <label>Confirm Password</label>
-        <input type="password" formControlName="confirmPassword">
+        <input type="password" formControlName="confirmPassword" placeholder="Confirm your password">
       </div>
   
       <div *ngIf="errorMessage" class="error-message">
@@ -47,3 +55,4 @@
       </div>
     </form>
   </div>
+</main>
