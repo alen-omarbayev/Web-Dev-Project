@@ -9,61 +9,152 @@ main{
 
 }
 
-.signup-container {
-  background-color: #00A6FB;
-  padding: 30px;
-  border-radius: 8px;
-  width: 300px;
+/* Основные стили формы */
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Заголовок формы */
+.login-title {
   text-align: center;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  color: #2c3e50;
+  margin-bottom: 1.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
-.signup-container h1 {
-  margin-bottom: 20px;
-  color: #013553;
-  font-family: "Space Grotesk", sans-serif;
+/* Стили для полей ввода */
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
-.signup-container input[type="text"],
-.signup-container input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: 'Yrsa', serif;
-  color: #013553;
-}
-
-
-.login-button {
-  background-color: #006494;
-  color: white;
-  border: none;
-  padding: 10px;
-  width: 100%;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-bottom: 15px;
-  font-size: 16px;
-  transition: background-color 0.3s;
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #5d6d7e;
+  font-size: 0.9rem;
+  font-weight: 500;
   font-family: 'Space Grotesk', sans-serif;
 }
 
-.login-button:hover {
-  background-color: #003554;
-}
-
-.create-account {
-  display: block;
-  margin-bottom: 15px;
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
   font-family: Yrsa, serif;
 }
 
-.create-account:hover {
-  text-decoration: underline;
+.form-group input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  outline: none;
+  background-color: #fff;
+}
+
+/* Стили кнопки */
+.login-button {
+  width: 200px; /* Фиксированная ширина */
+  padding: 14px;
+  background-color: #00A6FB;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  display: block; /* Чтобы margin-auto работал */
+  margin-left: auto;
+  margin-right: auto; /* Центрирование кнопки */
+  font-family: 'Space Grotesk', serif;
+}
+
+.login-button:hover {
+  background-color: #013553;
+  
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.login-button:disabled {
+  background: #bdc3c7;
+  transform: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Стили для сообщения об ошибке */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  text-align: center;
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+/* Стили для тестовой кнопки (можно удалить в продакшене) */
+.test-btn {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 10px;
+  background: #f1f1f1;
+  color: #7f8c8d;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.test-btn:hover {
+  background: #e0e0e0;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+  .login-container {
+    margin: 20px auto;
+    padding: 1.5rem;
+    width: 90%;
+  }
+  
+  .login-title {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+.login-form h2{
+  font-family: 'Space Grotesk', sans-serif;
+  color: #013553;
 }

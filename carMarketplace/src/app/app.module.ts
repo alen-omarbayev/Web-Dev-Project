@@ -11,6 +11,9 @@ import { CatalogComponent } from './catalog/catalog.component';
 import {FormsModule} from '@angular/forms';
 import { NewsListComponent } from './news-list/news-list.component';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
+import { AuthService } from './auth.service';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -27,9 +30,11 @@ import { NewsDetailComponent } from './news-detail/news-detail.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
