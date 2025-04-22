@@ -8,11 +8,16 @@ from .serializers import UserSerializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 
 class CarListCreateAPIView(generics.ListCreateAPIView):
     queryset = Car.objects.all().order_by('-id')
     serializer_class = CarSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+    def perform_create(self, serializer):
+        serializer.save()
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
